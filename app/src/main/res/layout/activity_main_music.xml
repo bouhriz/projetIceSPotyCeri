@@ -1,0 +1,150 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    tools:context="ceri.spotyceri.GUI.MainActivity"
+    android:weightSum="10"
+    android:background="@drawable/background_gradient"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtsnamemusique"
+            android:layout_margin="20dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="SpotyCERI"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-smallcaps"
+
+            android:textSize="22sp"
+            android:textAlignment="center"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/imgeView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/equalazir_stoped"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            >
+            <SeekBar
+                android:id="@+id/seekkbar"
+                android:layout_centerInParent="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="20dp"
+                android:layout_marginBottom="40dp"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content">
+
+            </SeekBar>
+
+            <TextView
+                android:id="@+id/textstart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="false"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@+id/seekkbar"
+                android:text="0:00"
+                android:textColor="#FFF"
+                android:textSize="12sp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/textstop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="false"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/seekkbar"
+                android:text="0:00"
+                android:textColor="#FFF"
+                android:textSize="12sp">
+            </TextView>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_weight="3">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <Button
+                android:id="@+id/btnpress"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginRight="-240dp"
+                android:layout_toStartOf="@+id/bntSound"
+                android:background="@drawable/ic_play"
+                ></Button>
+
+            <Button
+                android:id="@+id/bntSound"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="340dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginRight="21dp"
+                android:background="@drawable/ic_volume"
+                ></Button>
+
+            <Button
+                android:id="@+id/bntSpeech"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_speech"
+
+
+                ></Button>
+
+            <com.gauravk.audiovisualizer.visualizer.BlastVisualizer
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/blast"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                custom:avDensity="0.5"
+                custom:avType="outline"
+                custom:avWidth="4dp"
+                custom:avColor="#FF362E"
+                custom:avSpeed="normal"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
